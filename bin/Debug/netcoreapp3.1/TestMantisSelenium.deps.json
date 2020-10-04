@@ -18,6 +18,7 @@
           "Selenium.WebDriver.ChromeDriver": "85.0.4183.8700",
           "Selenium.WebDriver.IEDriver": "3.150.1.2",
           "System.Configuration.ConfigurationManager": "4.7.0",
+          "WebDriverChromeDriver": "2.10.0",
           "NUnit": "3.12.0"
         },
         "runtime": {
@@ -989,7 +990,8 @@
             "fileVersion": "4.6.24705.1"
           }
         }
-      }
+      },
+      "WebDriverChromeDriver/2.10.0": {}
     }
   },
   "libraries": {
@@ -1536,6 +1538,13 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "WebDriverChromeDriver/2.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWQLYlmWe1ZKTn+nZ7PDxeoiHoJ8Ctm0ZrWl/s2ahebf1MPF9E8kly/8TnYdarQ8xNzQc+TUHSb/aM9E7AwYLA==",
+      "path": "webdriverchromedriver/2.10.0",
+      "hashPath": "webdriverchromedriver.2.10.0.nupkg.sha512"
     }
   }
 }

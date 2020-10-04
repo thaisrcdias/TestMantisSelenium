@@ -108,4 +108,3 @@ C:\Users\thais\source\repos\TestMantisSelenium\obj\Debug\netcoreapp3.1\TestManti
 C:\Users\thais\source\repos\TestMantisSelenium\obj\Debug\netcoreapp3.1\TestMantisSelenium.dll
 C:\Users\thais\source\repos\TestMantisSelenium\obj\Debug\netcoreapp3.1\TestMantisSelenium.pdb
 C:\Users\thais\source\repos\TestMantisSelenium\obj\Debug\netcoreapp3.1\TestMantisSelenium.genruntimeconfig.cache
-C:\Users\thais\source\repos\TestMantisSelenium\obj\Debug\netcoreapp3.1\TestMantisSelenium.csprojAssemblyReference.cache

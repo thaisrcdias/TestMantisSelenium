@@ -30,7 +30,6 @@ namespace TestMantisSelenium.PageObjects
         protected IWebElement UserNameField => driver.FindElement(By.Name("username"));
         protected IWebElement PasswordField => driver.FindElement(By.Name("password"));
         protected IWebElement LoginButton => driver.FindElement(By.XPath("//input[@value='Login']"));
-
         protected IWebElement LoggedInUserLabel => driver.FindElement(By.ClassName("login-info-left"));
 
         #endregion

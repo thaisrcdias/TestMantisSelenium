@@ -19,8 +19,8 @@ namespace TestMantisSelenium.Tests
 
             MyAccountPageObjects myAccountPageObjects = new MyAccountPageObjects(driver);
             myAccountPageObjects.ClickOnMyAccount();
-            myAccountPageObjects.FillRealnamefField(ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location).
-                AppSettings.Settings["RealName"].Value);
+            myAccountPageObjects.FillRealnamefField(ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly()
+                .Location).AppSettings.Settings["RealName"].Value);
             myAccountPageObjects.ClickOnSubmitButton();
 
             Assert.AreEqual("", verificationErrors.ToString());

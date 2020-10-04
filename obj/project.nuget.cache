@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MKwdT0Eoh0gh7272a6rv4YVafQLDIjg/DtejoJ5AKgkP/rwDrEVez0AVL37wYXt7jAvCgRV4r3/fHdJ2v94pKg==",
+  "dgSpecHash": "BgCXZ5UcKlrJsUARwMDJV8dTOh6z/YgLwrQlba6PuIrKIh2P68NtPZDOsyM8RQN6R7DafPtmCTK8CgyGqqpTew==",
   "success": true,
   "projectFilePath": "C:\\Users\\thais\\source\\repos\\TestMantisSelenium\\TestMantisSelenium.csproj",
   "expectedPackageFiles": [
@@ -80,7 +80,8 @@
     "C:\\Users\\thais\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\thais\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\thais\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\thais\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\thais\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\thais\\.nuget\\packages\\webdriverchromedriver\\2.10.0\\webdriverchromedriver.2.10.0.nupkg.sha512"
   ],
   "logs": []
 }

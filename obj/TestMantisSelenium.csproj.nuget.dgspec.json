@@ -82,6 +82,10 @@
               "target": "Package",
               "version": "[4.7.0, )"
             },
+            "WebDriverChromeDriver": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
             "nunit": {
               "target": "Package",
               "version": "[3.12.0, )"

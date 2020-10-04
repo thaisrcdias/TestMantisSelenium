@@ -31,7 +31,6 @@ namespace TestMantisSelenium.PageObjects
         protected IWebElement MyRealName => driver.FindElement(By.XPath("//input[@name='realname']"));
         protected IWebElement UpdateButton => driver.FindElement(By.XPath("//input[@value='Update User']"));
 
-
         #endregion
 
         #region Methods

@@ -1,12 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Reflection;
-using System.Text;
 using TestMantisSelenium.Common;
 
 namespace TestMantisSelenium.PageObjects
@@ -17,6 +14,7 @@ namespace TestMantisSelenium.PageObjects
         WebDriverWait wait = null;
         int waitComponent;
         IWebDriver driver = null;
+
 
         public MyViewPageObjects(IWebDriver driverReference)
         {
@@ -34,9 +32,8 @@ namespace TestMantisSelenium.PageObjects
         protected IWebElement CSVExportLink => driver.FindElement(By.LinkText("CSV Export"));
         //protected IWebElement UnassignedIssues => driver.FindElement(By.LinkText("Unassigned"));
 
-        //  protected IWebElement UnassignedIssues => driver.FindElement(By.XPath("//a[contains(text(),'Unassigned')]"));
-
-        protected IWebElement UnassignedIssues => driver.FindElement(By.CssSelector("body > div:nth-child(5) > table.hide > tbody > tr:nth-child(1) > td:nth-child(1) > table > tbody > tr:nth-child(1) > td > a"));
+        //protected IWebElement UnassignedIssues => driver.FindElement(By.XPath("//a[contains(text(),'Unassigned')]"));
+        protected IWebElement UnassignedIssues => driver.FindElement(By.CssSelector("body>div:nth-child(5)>table.hide>tbody>tr:nth-child(1)>td:nth-child(1)>table>tbody>tr:nth-child(1)>td>a"));
 
         #endregion
 
@@ -50,18 +47,13 @@ namespace TestMantisSelenium.PageObjects
 
         public void ClickOnUnassignedIssues()
         {
-            try
-            {
-                wait.Until(ExpectedConditions.ElementToBeClickable(UnassignedIssues));
-                NUnit.Framework.Assert.AreEqual("Unassigned", UnassignedIssues.Text);
-            }
-            catch (Exception e)
-            {
-                Assert.Fail(e.ToString());
-            }
+           // IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+           // js.ExecuteAsyncScript("document.querySelector('body>div:nth-child(5)>table.hide>tbody>tr:nth-child(1)>td:nth-child(1)>table>tbody>tr:nth-child(1)>td>a').click();");
+            wait.Until(ExpectedConditions.ElementToBeClickable(UnassignedIssues));
+            Assert.AreEqual("Unassigned", UnassignedIssues.Text);
         }
 
-        public void ClickOnExcelExportLink()
+        public void ClickOnCSVExportLink()
         {
             wait.Until(UtilSelenium.ElementIsVisible(CSVExportLink));
             CSVExportLink.Click();

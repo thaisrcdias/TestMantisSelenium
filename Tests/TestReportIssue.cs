@@ -1,9 +1,6 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Reflection;
-using System.Text;
 using TestMantisSelenium.BaseClass;
 using TestMantisSelenium.Helpers;
 using TestMantisSelenium.PageObjects;

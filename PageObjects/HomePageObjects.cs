@@ -1,9 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Configuration;
 using System.Reflection;
+using System.Threading;
 using TestMantisSelenium.Common;
 
 namespace TestMantisSelenium.PageObjects
@@ -24,7 +27,6 @@ namespace TestMantisSelenium.PageObjects
         }
         #endregion
 
-
         #region Web Elements
 
         #region Select Project
@@ -36,16 +38,11 @@ namespace TestMantisSelenium.PageObjects
 
         protected IWebElement LogoutLink => driver.FindElement(By.LinkText("Logout"));
 
-     
+        protected IWebElement IssueId => driver.FindElement(By.Name("bug_id"));
 
-        [FindsBy(How = How.Name, Using = "bug_id")]
-        public IWebElement tfBugId { get; set; }
+        protected IWebElement ButtonJump => driver.FindElement(By.XPath("//input[@value='Jump']"));
 
-        [FindsBy(How = How.XPath, Using = "//input[@value='Jump']")]
-        public IWebElement btJump { get; set; }
-
-        [FindsBy(How = How.XPath, Using = "//p")]
-        public IWebElement tfErro { get; set; }
+        protected IWebElement NotFoundIssue => driver.FindElement(By.XPath("//p"));
 
         #endregion
 
@@ -66,7 +63,23 @@ namespace TestMantisSelenium.PageObjects
             wait.Until(UtilSelenium.ElementIsVisible(LogoutLink));
             LogoutLink.Click();
         }
+        public void FillIssueField(string issueId)
+        {
+            wait.Until(UtilSelenium.ElementIsVisible(IssueId));
+            IssueId.SendKeys(issueId);
+        }
+        public void ClickOnJump()
+        {
+            wait.Until(UtilSelenium.ElementIsVisible(ButtonJump));
+            ButtonJump.Click();
+        }
 
+        public void CheckIssueNonExistent(string ID)
+        {
+            string text = "Issue " + ID + " not found.";
+            wait.Until(ExpectedConditions.ElementToBeClickable(NotFoundIssue));
+            Assert.AreEqual(text, NotFoundIssue.Text);
 
+        }
     }
 }

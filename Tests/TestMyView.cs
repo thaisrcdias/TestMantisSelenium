@@ -1,9 +1,5 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Reflection;
-using System.Text;
+using System.Threading;
 using TestMantisSelenium.BaseClass;
 using TestMantisSelenium.Helpers;
 using TestMantisSelenium.PageObjects;
@@ -23,7 +19,7 @@ namespace TestMantisSelenium.Tests
             MyViewPageObjects myViewPageObjects = new MyViewPageObjects(driver);
             myViewPageObjects.ClickOnViewIssues();
             myViewPageObjects.ClickOnUnassignedIssues();
-            myViewPageObjects.ClickOnExcelExportLink();
+            myViewPageObjects.ClickOnCSVExportLink();
             Assert.AreEqual("", verificationErrors.ToString());
         }
 

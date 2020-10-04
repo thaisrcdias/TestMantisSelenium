@@ -1,9 +1,6 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Reflection;
-using System.Text;
 using TestMantisSelenium.BaseClass;
 using TestMantisSelenium.Helpers;
 using TestMantisSelenium.PageObjects;
@@ -30,6 +27,32 @@ namespace TestMantisSelenium.Tests
 
             Assert.AreEqual("", verificationErrors.ToString());
         }
+
+        [Test]
+        [Category("CT")]
+        public void SearchIssue()
+        {
+            Login login = new Login();
+            login.DoLogin(driver);
+            HomePageObjects homePageObjects = new HomePageObjects(driver);
+            homePageObjects.FillIssueField("4871");
+            homePageObjects.ClickOnJump();
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
+
+        [Test]
+        [Category("CT")]
+        public void SearchNonExistentIssue()
+        {
+            Login login = new Login();
+            login.DoLogin(driver);
+            HomePageObjects homePageObjects = new HomePageObjects(driver);
+            homePageObjects.FillIssueField("999999899");
+            homePageObjects.ClickOnJump();
+            homePageObjects.CheckIssueNonExistent("999999899");
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
+
 
         [Test]
         [Category("CT")]
